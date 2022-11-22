@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\autores;
+use App\Models\carreras;
 use Illuminate\Http\Request;
 
 class AutoresController extends Controller
@@ -14,7 +15,9 @@ class AutoresController extends Controller
      */
     public function index()
     {
-        //
+        $Autores=Autores::all();
+        return view('Autores.index',compact('Autores'));
+
     }
 
     /**
@@ -24,7 +27,7 @@ class AutoresController extends Controller
      */
     public function create()
     {
-        //
+        return view('Autores.create');
     }
 
     /**
@@ -35,7 +38,11 @@ class AutoresController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            "nombre_autor"=>"required|min:3|max:100|unique:Autores",
+        ],[],["name"=>"nombre_autor","content"=>"contenido"]);
+        Autores::create(['nombre_autor'=>$request->nombre_autor,]);
+        return redirect()->route('autores.index');
     }
 
     /**
@@ -55,9 +62,9 @@ class AutoresController extends Controller
      * @param  \App\Models\autores  $autores
      * @return \Illuminate\Http\Response
      */
-    public function edit(autores $autores)
+    public function edit(autores $autore)
     {
-        //
+        return view('autores.update',compact('autore'));
     }
 
     /**
@@ -67,9 +74,13 @@ class AutoresController extends Controller
      * @param  \App\Models\autores  $autores
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, autores $autores)
+    public function update(Request $request, autores $autore)
     {
-        //
+        $request->validate([
+            "nombre_autor"=>"required|min:5|max:100|unique:Autores",
+        ],[],["name"=>"nombre_autor","content"=>"contenido"]);
+        $autore->update(['nombre_autor'=>$request->nombre_autor,]);
+        return redirect()->route('autores.index');
     }
 
     /**
@@ -78,8 +89,9 @@ class AutoresController extends Controller
      * @param  \App\Models\autores  $autores
      * @return \Illuminate\Http\Response
      */
-    public function destroy(autores $autores)
+    public function destroy(autores $autore)
     {
-        //
+        $autore->delete();
+        return redirect()->route('autores.index');
     }
 }

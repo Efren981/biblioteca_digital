@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RolController;
 use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\CarrerasController;
+use App\Http\Controllers\AutoresController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,4 +30,6 @@ Route::group(['middleware'=>['auth']],function(){
     Route::resource("roles",RolController::class);
     Route::resource("usuarios",UsuarioController::class);
     Route::resource("carreras",CarrerasController::class);
+    Route::resource("autores",AutoresController::class);
+
 });
