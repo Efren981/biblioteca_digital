@@ -14,7 +14,8 @@ class EditorialesController extends Controller
      */
     public function index()
     {
-        //
+        $editoriales=editoriales::all();
+        return view('Editoriales.index',compact('editoriales'));
     }
 
     /**
@@ -24,7 +25,7 @@ class EditorialesController extends Controller
      */
     public function create()
     {
-        //
+        return view('Editoriales.create');
     }
 
     /**
@@ -35,7 +36,11 @@ class EditorialesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            "nombre"=>"required|min:5|max:100|unique:editoriales",
+        ],[],["name"=>"nombre","content"=>"contenido"]);
+        Editoriales::create(['nombre'=>$request->nombre,]);
+        return redirect()->route('editoriales.index');
     }
 
     /**
@@ -55,9 +60,9 @@ class EditorialesController extends Controller
      * @param  \App\Models\editoriales  $editoriales
      * @return \Illuminate\Http\Response
      */
-    public function edit(editoriales $editoriales)
+    public function edit(editoriales $editoriale)
     {
-        //
+        return view('Editoriales.update',compact('editoriale'));
     }
 
     /**
@@ -67,9 +72,13 @@ class EditorialesController extends Controller
      * @param  \App\Models\editoriales  $editoriales
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, editoriales $editoriales)
+    public function update(Request $request, editoriales $editoriale)
     {
-        //
+        $request->validate([
+            "nombre"=>"required|min:5|max:100|unique:editoriales",
+        ],[],["name"=>"nombre","content"=>"contenido"]);
+        $editoriale->update(['nombre'=>$request->nombre,]);
+        return redirect()->route('editoriales.index');
     }
 
     /**
@@ -78,8 +87,9 @@ class EditorialesController extends Controller
      * @param  \App\Models\editoriales  $editoriales
      * @return \Illuminate\Http\Response
      */
-    public function destroy(editoriales $editoriales)
+    public function destroy(editoriales $editoriale)
     {
-        //
+        $editoriale->delete();
+        return  redirect()->route('editoriales.index');
     }
 }

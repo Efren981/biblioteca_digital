@@ -72,6 +72,16 @@
                                     Autores
                                 </a>
                             </li>
+                            <li class="nav-item">
+                                <a  class="nav-link" href="/editoriales">
+                                    Editoriales
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a  class="nav-link" href="/libros">
+                                    Libros
+                                </a>
+                            </li>
                             
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

@@ -7,6 +7,8 @@ use App\Http\Controllers\RolController;
 use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\CarrerasController;
 use App\Http\Controllers\AutoresController;
+use App\Http\Controllers\EditorialesController;
+use App\Http\Controllers\LibrosController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,5 +33,7 @@ Route::group(['middleware'=>['auth']],function(){
     Route::resource("usuarios",UsuarioController::class);
     Route::resource("carreras",CarrerasController::class);
     Route::resource("autores",AutoresController::class);
+    Route::resource("editoriales",EditorialesController::class);
+    Route::resource("libros",LibrosController::class);
 
 });

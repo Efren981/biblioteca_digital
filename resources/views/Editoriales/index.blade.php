@@ -8,13 +8,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12" style="">
-                    <h1 class="display-4 bg-dark text-light" style="">Libros</h1>
+                    <h1 class="display-4 bg-dark text-light" style="">Editoriales</h1>
                 </div>
             </div>
             <div class="row d-flex justify-content-center">
                 <div class="row d-flex justify-content-center">
                     <div class="col-3 d-flex justify-content-center">
-                        <a href="{{route('libros.create')}}" class="btn btn-success mb-3"> Nuevo Libro</a>
+                        <a href="{{route('editoriales.create')}}" class="btn btn-success mb-3"> Nueva Editorial</a>
                     </div>
                 </div>
 
@@ -25,29 +25,22 @@
                             <tr>
                                 <th>ID</th>
                                 <th>Nombre Editorial</th>
-                                <th>Numero Libro</th>
-                                <th>Carrera</th>
-                                <th>Editorial</th>
-                                <th>año publicacion</th>
+                                <th>Descripcion</th>
                                 <th>Opciones</th>
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach($libros as $datos)
+                            @foreach($editoriales as $datos)
                                 <tr>
                                     <th>{{$loop->index+1}}</th>
-                                    <td>{{$datos->nombre_libro}}</td>
-                                    <td>{{$datos->numero_libro}}</td>
-                                    <td>{{$datos->descripcion}}</td>
                                     <td>{{$datos->nombre}}</td>
-                                    <td>{{$datos->anio_de_p}}</td>
+                                    <td>{{$datos->descripcion}}</td>
                                     <td>
-
-                                        @can('editar-libro')
-                                            <a class="btn btn-warning" href="{{route('libros.edit',$datos->id)}}"> Editar </a>
+                                        @can('editar-editorial')
+                                            <a class="btn btn-warning" href="{{route('editoriales.edit',$datos->id)}}"> Editar </a>
                                         @endcan
-                                        @can('borrar-libros')
-                                            <form action="{{route('libros.destroy',$datos->id)}}" method="post">
+                                        @can('borrar-editoriales')
+                                            <form action="{{route('editoriales.destroy',$datos->id)}}" method="post">
                                                 @csrf
                                                 @method('delete')
                                                 <button class="btn btn-danger" type="submit"> Borrar </button>
