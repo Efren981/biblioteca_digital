@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RolController;
 use App\Http\Controllers\UsuarioController;
+use App\Http\Controllers\CarrerasController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,4 +28,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::group(['middleware'=>['auth']],function(){
     Route::resource("roles",RolController::class);
     Route::resource("usuarios",UsuarioController::class);
+    Route::resource("carreras",CarrerasController::class);
 });

@@ -14,7 +14,8 @@ class CarrerasController extends Controller
      */
     public function index()
     {
-        //
+        $carreras=carreras::all();
+        return view('carreras.index',compact('carreras'));
     }
 
     /**
@@ -24,7 +25,7 @@ class CarrerasController extends Controller
      */
     public function create()
     {
-        //
+        return view('carreras.create');
     }
 
     /**
@@ -35,7 +36,11 @@ class CarrerasController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            "descripcion"=>"required|min:5|max:100|unique:carreras",
+            ],[],["name"=>"nombre","content"=>"contenido"]);
+        Carreras::create(['descripcion'=>$request->descripcion,]);
+        return redirect()->route('carreras.index');
     }
 
     /**
@@ -55,9 +60,9 @@ class CarrerasController extends Controller
      * @param  \App\Models\carreras  $carreras
      * @return \Illuminate\Http\Response
      */
-    public function edit(carreras $carreras)
+    public function edit(carreras $carrera)
     {
-        //
+        return view('carreras.update',compact('carrera'));
     }
 
     /**
@@ -67,9 +72,13 @@ class CarrerasController extends Controller
      * @param  \App\Models\carreras  $carreras
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, carreras $carreras)
+    public function update(Request $request, carreras $carrera)
     {
-        //
+        $request->validate([
+            "descripcion"=>"required|min:5|max:100|unique:carreras",
+            ],[],["name"=>"nombre","content"=>"contenido"]);
+        $carrera->update(['descripcion'=>$request->descripcion,]);
+        return redirect()->route('carreras.index');
     }
 
     /**
@@ -78,8 +87,9 @@ class CarrerasController extends Controller
      * @param  \App\Models\carreras  $carreras
      * @return \Illuminate\Http\Response
      */
-    public function destroy(carreras $carreras)
+    public function destroy(carreras $carrera)
     {
-        //
+        $carrera->delete();
+        return redirect()->route('carreras.index');
     }
 }
