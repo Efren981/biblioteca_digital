@@ -27,6 +27,9 @@ class LibrosController extends Controller
 
 
 
+
+
+
      */
     public function index()
     {
@@ -63,7 +66,7 @@ class LibrosController extends Controller
             "numero_libro"=>"required",
             "id_carrera"=>"required",
             "id_editorial"=>"required",
-            "anio_de_p"=>"required |unique:libros|Integer"
+            "anio_de_p"=>"required|Integer"
         ],[],["name"=>"nombre","content"=>"contenido"]);
         Libros::create(['nombre_libro'=>$request->nombre_libro,
             'numero_libro'=>$request->numero_libro,
@@ -111,7 +114,7 @@ class LibrosController extends Controller
             "numero_libro"=>"required",
             "id_carrera"=>"required",
             "id_editorial"=>"required",
-            "anio_de_p"=>"required |unique:libros|Integer"
+            "anio_de_p"=>"required |Integer"
         ],[],["name"=>"nombre","content"=>"contenido"]);
         $libro->update(['nombre_libro'=>$request->nombre_libro,
             'numero_libro'=>$request->numero_libro,
