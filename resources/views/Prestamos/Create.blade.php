@@ -24,7 +24,7 @@
                         <label>Usuarios</label>
                         <select name="id_user" id="id_user">
                             <option selected="0">Seleciona una opcion</option>
-                            @foreach($users as $user)
+                            @foreach($user as $user)
                                 <option value="{{$user->id}}">{{$user->name}}</option>
                             @endforeach
                         </select>

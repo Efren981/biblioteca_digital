@@ -96,9 +96,9 @@ class PrestamosController extends Controller
     public function edit(prestamos $prestamo)
     {
         $prestamos=prestamos::all();
-        $users=users::all();
+        $user=user::all();
         $libros=libros::all();
-        return view('prestamos,update',compact('prestamo','libros','users'));
+        return view('prestamos,update',compact('prestamo','libros','user'));
     }
 
     /**
