@@ -10,3 +10,4 @@ class carreras extends Model
     use HasFactory;
     protected $fillable=['descripcion'];
 }
+
