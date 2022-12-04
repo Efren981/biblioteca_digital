@@ -61,15 +61,16 @@ class PrestamosController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
+       /* $request->validate([
             "name"=>"required",
             "nombre_libro"=>"required|min:5|max:100|unique:libros",
             "fecha_prestamo"=>"required",
             "fecha_entrega"=>"required",
 
-        ],[],["name"=>"nombre","content"=>"contenido"]);
-        Prestamos::create(['name'=>$request->name,
-            'nombre_libro'=>$request->nombre_libro,
+        ],[],["name"=>"nombre","content"=>"contenido"]);*/
+
+        Prestamos::create(['id_user'=>$request->id_user,
+            'id_libro'=>$request->id_libro,
             'fecha_prestamo'=>$request->fecha_prestamo,
             'fecha_entrega'=>$request->fecha_entrega,]);
 
