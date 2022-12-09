@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section("libros")
+@section("Categorias")
     active
 @endsection
 @section("content")
@@ -8,13 +8,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12" style="">
-                    <h1 class="display-4 bg-dark text-light" style="">Libros</h1>
+                    <h1 class="display-4 bg-dark text-light" style="">Categorias</h1>
                 </div>
             </div>
             <div class="row d-flex justify-content-center">
                 <div class="row d-flex justify-content-center">
                     <div class="col-3 d-flex justify-content-center">
-                        <a href="{{route('libros.create')}}" class="btn btn-success mb-3"> Nuevo Libro</a>
+                        <a href="{{route('categorias.create')}}" class="btn btn-success mb-3"> Nueva Categoria</a>
                     </div>
                 </div>
 
@@ -24,33 +24,25 @@
                             <thead class="thead-dark">
                             <tr>
                                 <th>ID</th>
-                                <th>Nombre Libro</th>
-                                <th>Editorial</th>
-                                <th>Año de Publicacion</th>
-                                <th>Categorias</th>
-                                <th>Autores</th>
+                                <th>Nombre Categoria</th>
                                 <th>Opciones</th>
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach($libros as $datos)
+                            @foreach($categorias as $datos)
                                 <tr>
                                     <th>{{$loop->index+1}}</th>
-                                    <td>{{$datos->nombre_libro}}</td>
-                                    <td>{{$datos->nombre}}</td>
-                                    <td>{{$datos->anio_de_p}}</td>
-                                    <!--<td>{{$datos->nombre_categoria}}</td>-->
-                                    <td>{{$datos->nombre_autor}}</td>
-                                    <td>
+                                    <td>{{$datos->Nombre_categoria}}</td>
 
-                                        @can('editar-libro')
-                                            <a class="btn btn-warning" href="{{route('libros.edit',$datos->id)}}"> Editar </a>
+                                    <td>
+                                        @can('editar-categoria')
+                                            <a class="btn btn-warning m-2" href="{{route('categorias.edit',$datos->id)}}"> Editar </a>
                                         @endcan
-                                        @can('borrar-libros')
-                                            <form action="{{route('libros.destroy',$datos->id)}}" method="post">
+                                        @can('borrar-categorias')
+                                            <form action="{{route('categorias.destroy',$datos->id)}}" method="post">
                                                 @csrf
                                                 @method('delete')
-                                                <button class="btn btn-danger" type="submit"> Borrar </button>
+                                                <button class="btn btn-danger m-2" type="submit"> Borrar </button>
                                             </form>
                                         @endcan
                                     </td>
