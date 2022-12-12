@@ -47,9 +47,8 @@
                         <div class="invalid-feedback">{{$message}}</div>
                         @enderror
                     </div>
+
                     <div class="row d-flex justify-content-center mt-3">
-<<<<<<< HEAD
-<<<<<<< HEAD
                         <label>Editorial</label>
                         <select name="id_editorial" id="id_editorial">
                             <option selected="0">Seleciona una opcion</option>
@@ -58,16 +57,8 @@
                             @endforeach
                         </select>
                     </div>
-                    <div class="row d-flex justify-content-center mt-3">
-                        <label>Carrera</label>
-                        <select name="id_carrera" id="id_carrera">
-                            <option selected="0">Selecciona una opcion</option>
-                            @foreach($carreras as $carrera)
-                                <option value="{{$carrera->id}}">{{$carrera->descripcion}}</option>
-                        @endforeach
-=======
-=======
->>>>>>> parent of 513cc4c (Prestamos y libros)
+
+
                         <label>Categoria</label>
                         <div class="col d-flex">
                             <select name="id_categoria" id="id_categoria">
@@ -98,7 +89,6 @@
                         <div class="col-6 d-flex justify-content-center mt-3">
                             <button class="btn btn-primary" type="submit">Guardar</button>
                         </div>
->>>>>>> parent of 513cc4c (Prestamos y libros)
                     </div>
 
                 </form>
