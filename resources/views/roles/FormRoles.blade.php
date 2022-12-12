@@ -4,13 +4,16 @@
     active
 @endsection
 @section("content")
-  <div class="py-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h1 class="text-center"><b>Cargar Rol</b></h1>
-        </div>
-      </div>
+<body 
+  style="background-color:#95EEE1;">
+</body>
+<div class="py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12" style="">
+                    <h1 class="display-4 bg-dark text-light text-center" style="">ROLES</h1>
+                </div>
+            </div>
     </div>
   </div>
   <div class="py-5">
@@ -48,8 +51,8 @@
                   @endforeach
               </div>
           </div>
-              <div class="col-xs-12 col-sm-12 col-md-12">
-                <button type="submit" class="btn btn-primary mt-4">Guardar</button>
+              <div class="col-xs-12 col-sm-12 col-md-12 justify-content-center">
+                <button type="submit" class="btn btn-primary mt-4 justify-content-center  ">Guardar</button>
               </div>
           </div>
       </div>

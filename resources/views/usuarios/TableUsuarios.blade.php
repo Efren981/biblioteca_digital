@@ -4,21 +4,23 @@
     active
 @endsection
 @section("content")
-  <div class="py-5">
+<body 
+  style="background-color:#95EEE1;">
+</body>
+<div class="py-4">
     <div class="container">
-      <div class="row d-flex justify-content-center">
-        <div class="col-8 d-flex justify-content-center">
-          <h1 class="text-center">Tabla Usuarios<br></h1>
-        </div>
+        <div class="row ">
+            <div class="col-md-12 text-center " style="">
+                <h1 class="display-4 text-center bg-dark text-light " style="">USUARIOS</h1>
+            </div>
       </div>
         <div class="col-md-12 text-center">
           @can('crear-usuario')
-          <a class="btn btn-success mb-3" href="{{route('usuarios.create')}}" > Nuevo registro</a>@endcan
+          <a class="btn btn-success mb-3" href="{{route('usuarios.create')}}" > NUEVO REGISTRO</a>@endcan
         </div>
-      <div class="row d-flex justify-content-center">
-        <div class="col-9 d-flex justify-content-center">
-          <div class="table-responsive">
-            <table class="table table-bordered ">
+        <div class="row d-flex justify-content-center">
+                <div class="col-10 d-flex justify-content-center">
+                <table class="table">
               <thead class="thead-dark">
                 <tr>
                   <th>ID</th>

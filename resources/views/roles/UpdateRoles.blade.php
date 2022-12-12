@@ -4,13 +4,16 @@
     active
 @endsection
 @section("content")
-  <div class="py-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h1 class="text-center"><b>Cambiar permisos del rol {{$role->name}}</b></h1>
-        </div>
-      </div>
+<body 
+  style="background-color:#95EEE1;">
+</body>
+<div class="py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12" style="">
+                    <h1 class="display-4 bg-dark text-light text-center" style="">EDITAR ROL</h1>
+                </div>
+            </div>
     </div>
   </div>
   <div class="py-5">
@@ -49,7 +52,7 @@
                             </div>
                         </div>
                         
-                        <button type="submit" class="btn btn-primary">Guardar</button>
+                        <button type="submit" class="btn btn-primary">GUARDAR</button>
                         
                     </div>
                     {!! Form::close() !!}

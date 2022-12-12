@@ -4,21 +4,24 @@
     active
 @endsection
 @section("content")
-  <div class="py-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h1 class="text-center">Roles Existentes<br></h1>
-        </div>
-      </div>
+<body 
+  style="background-color:#95EEE1;">
+</body>
+<div class="py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12" style="">
+                    <h1 class="display-4 bg-dark text-light text-center" style="">ROLES</h1>
+                </div>
+            </div>
         <div class="col-md-12 text-center">
           @can('crear-rol')
-          <a href="{{route('roles.create')}}" class="btn btn-success mb-3" href="libros/create">Nuevo registro</a>
+          <a href="{{route('roles.create')}}" class="btn btn-success mb-3" href="libros/create">NUEVO ROL</a>
               @endcan  
         </div>
-      <div class="row d-flex justify-content-center">
-         <div class="col-6 d-flex justify-content-center">
-            <table class="table table-bordered ">
+        <div class="row d-flex justify-content-center">
+                <div class="col-10 d-flex justify-content-center">
+                <table class="table">
               <thead class="thead-dark">
                 <tr>
                   <th>ID</th>

@@ -4,6 +4,9 @@
     active
 @endsection
 @section("content")
+<body 
+  style="background-color:#95EEE1;">
+</body>
     <div class="py-4">
         <div class="container">
             <div class="row">

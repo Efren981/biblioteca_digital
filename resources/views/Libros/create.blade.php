@@ -4,21 +4,20 @@
     active
 @endsection
 @section("content")
-    <div class="container">
-        <div class="row d-flex justify-content-center">
-            <div class="col">
-                <h1 class="text-center">Agregar nuevo Libro</h1>
+<body 
+  style="background-color:#95EEE1;">
+</body>
+<div class="container">
+            <div class="row">
+                <div class="col-md-12" style="">
+                    <h1 class="display-4 bg-dark text-light text-center" style="">AGREGAR LIBRO</h1>
+                </div>
             </div>
-        </div>
         <div class="row d-flex justify-content-center mt-3">
-            <div class="col-6 d-flex justify-content-center">
+            <div class="col-7 d-flex justify-content-center">
                 <form action="{{url ('libros')}}" method="POST">
                     @csrf
-                    <div class="row d-flex justify-content-center">
-                        <div class="col-6 d-flex justify-content-center">
-                            <button class="btn btn-primary" type="submit">Guardar</button>
-                        </div>
-                    </div>
+                    
                     <div class="row d-flex justify-content-center">
                         <label for="nombre_libro">Nombre del libro</label>
                         <input type="text" name="nombre_libro" class="form-control @error('nombre_libro')is-invalid @enderror" id="nombre_libro" value="{{old('nombre_libro')}}">
@@ -34,7 +33,7 @@
                         @enderror
                     </div>
                     <div class="row d-flex justify-content-center mt-3">
-                        <label for="anio_de_p">Año de Publicacion</label>
+                        <label for="anio_de_p">Año de Publicación</label>
                         <input type="text" name="anio_de_p" class="form-control @error('anio_de_p')is-invalid @enderror" id="anio_de_p" value="{{old('anio_de_p')}}">
                         @error('anio_de_p')
                         <div class="invalid-feedback">{{$message}}</div>
@@ -57,8 +56,13 @@
                             @foreach($carreras as $carrera)
                                 <option value="{{$carrera->id}}">{{$carrera->descripcion}}</option>
                         @endforeach
+                        </select>
                     </div>
-
+                    <div class="row d-flex justify-content-center mt-3">
+                        <div class="col-6 d-flex justify-content-center">
+                            <button class="btn btn-primary" type="submit">GUARDAR</button>
+                        </div>
+                    </div>
                 </form>
             </div>
         </div>

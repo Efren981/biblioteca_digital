@@ -1,4 +1,8 @@
 <!doctype html>
+
+<body 
+  style="background-color:#95EEE1;">
+</body>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
@@ -10,7 +14,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com" >
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
     <!-- Scripts -->
@@ -18,16 +22,16 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light bg-dark shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <img src="{{url("xampp/htdocs/img/Logo.png")}}" height="50" width="70">
+                    <img src="{{url("https://document-export.canva.com/RSmvA/DAFUg8RSmvA/6/thumbnail/0001.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAQYCGKMUHWDTJW6UD%2F20221211%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221211T090819Z&X-Amz-Expires=75703&X-Amz-Signature=e2dddfa4debf6c45bd8dbea3ecba0c5fbfce4e036e2dc41dba320a932ffb2d26&X-Amz-SignedHeaders=host&response-expires=Mon%2C%2012%20Dec%202022%2006%3A10%3A02%20GMT")}}" height="75" width="75">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
+                <button class="navbar-toggler"  type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                    <span class="navbar-toggler-icon" ></span>
                 </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent" >
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
 
@@ -38,58 +42,58 @@
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <li class="nav-item ">
+                                    <a class="text-white nav-link" href="{{ route('login') }}">{{ __('Iniciar Sesión') }} </a>
                                 </li>
                             @endif
 
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class=" text-white nav-link" href="{{ route('register') }}">{{ __('Registrarse') }}</a>
                                 </li>
                             @endif
                         @else
                             
-                            <li class="nav-item">
-                                <a  class="nav-link" href="/roles">
+                            <li class="nav-item" >
+                                <a  class="text-white nav-link"  href="/roles">
                                     Roles
                                 </a>
                             </li>
 
                             <li class="nav-item">
-                                <a  class="nav-link" href="/usuarios">
+                                <a  class="text-white nav-link" href="/usuarios">
                                     Usuarios
                                 </a>
                             </li>
 
                             <li class="nav-item">
-                                <a  class="nav-link" href="/carreras">
+                                <a  class="text-white nav-link" href="/carreras">
                                     Carreras
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a  class="nav-link" href="/autores">
+                                <a  class="text-white nav-link" href="/autores">
                                     Autores
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a  class="nav-link" href="/editoriales">
+                                <a  class="text-white nav-link" href="/editoriales">
                                     Editoriales
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a  class="nav-link" href="/libros">
+                                <a  class="text-white nav-link" href="/libros">
                                     Libros
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a  class="nav-link" href="/prestamos">
+                                <a  class="text-white nav-link" href="/prestamos">
                                     Prestamos
                                 </a>
                             </li>
                             
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown" class="text-white nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                 </a>
 

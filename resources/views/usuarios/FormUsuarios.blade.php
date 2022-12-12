@@ -4,16 +4,19 @@
     active
 @endsection
 @section("content")
-<div class="py-5">
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <h1 class="text-center"><b class="text-center">Agregar Usuario</b></h1>
-    </div>
-  </div>
+<body 
+  style="background-color:#95EEE1;">
+</body>
+<div class="py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12" style="">
+                    <h1 class="display-4 bg-dark text-light text-center" style="">REGISTRAR USUARIO</h1>
+                </div>
+            </div>
 </div>
 </div>
-<div class="py-5">
+<div class="py-4">
 <div class="container">
   <div class="row">
     <div class="col-md-12">
@@ -61,8 +64,8 @@
                   {!! Form::select('roles[]', $roles,[], array('class' => 'form-control')) !!}
               </div>
           </div>
-          <div class="col-xs-12 col-sm-12 col-md-12">
-              <button type="submit" class="btn btn-primary">Guardar</button>
+          <div class="gap-2 justify-content-center">
+              <button type="submit" class="btn btn-primary justify-content-center">Guardar</button>
           </div>
       </div>
       {!! Form::close() !!}

@@ -4,6 +4,9 @@
     active
 @endsection
 @section("content")
+<body 
+  style="background-color:#95EEE1;">
+</body>
     <div class="container">
         <div class="row d-flex justify-content-center">
             <div class="col">
