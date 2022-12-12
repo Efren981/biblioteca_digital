@@ -10,6 +10,11 @@ use App\Http\Controllers\AutoresController;
 use App\Http\Controllers\EditorialesController;
 use App\Http\Controllers\LibrosController;
 use App\Http\Controllers\PrestamosController;
+use App\Http\Controllers\asignaEditorialController;
+use App\Http\Controllers\CategoriasController;
+use App\Http\Controllers\asignaCategoriaController;
+use App\Http\Controllers\asignaAutoresController;
+use App\Http\Controllers\AsignaLibrosController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -37,5 +42,10 @@ Route::group(['middleware'=>['auth']],function(){
     Route::resource("editoriales",EditorialesController::class);
     Route::resource("libros",LibrosController::class);
     Route::resource("prestamos",PrestamosController::class);
+    Route::resource("editoriala",asignaEditorialController::class);
+    Route::resource("categorias",CategoriasController::class);
+    Route::resource("nuevacategoria",asignaCategoriaController::class);
+    Route::resource("nuevoautor",asignaAutoresController::class);
+    Route::resource("nuevoslibros",AsignaLibrosController::class);
 
 });
