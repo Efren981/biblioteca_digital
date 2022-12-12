@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\editoriales;
+use App\Models\categorias;
 use App\Models\autores;
 
-class asignaAutoresController extends Controller
+class AsignaLibrosController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -25,7 +27,10 @@ class asignaAutoresController extends Controller
     public function create()
     {
 
-        return view('Autores.nuevoautor');
+        $editoriales=editoriales::all();
+        $categorias=categorias::all();
+        $autores=autores::all();
+        return view("Libros.nuevoslibros",compact("editoriales","categorias","autores"));
     }
 
     /**
@@ -37,10 +42,18 @@ class asignaAutoresController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            "nombre_autor"=>"required|min:3|max:100|unique:Autores",
-        ],[],["name"=>"nombre_autor","content"=>"contenido"]);
-        autores::create(['nombre_autor'=>$request->nombre_autor,]);
-        return redirect()->route('libros.create');
+            "nombre_libro"=>"required|min:5|max:100|unique:libros",
+            "id_editorial"=>"required",
+            "anio_de_p"=>"required|Integer",
+            "id_categoria"=>"required",
+            "id_autor"=>"required"
+        ],[],["name"=>"nombre","content"=>"contenido"]);
+        Libros::create(['nombre_libro'=>$request->nombre_libro,
+            'id_editorial'=>$request->id_editorial,
+            'anio_de_p'=>$request->anio_de_p,
+            'id_categoria'=>$request->id_categoria,
+            'id_autor'=>$request->id_autor]);
+        return redirect()->route('libros.index');
     }
 
     /**

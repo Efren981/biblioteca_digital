@@ -38,6 +38,9 @@
                                 <option value="{{$libro->id}}">{{$libro->nombre_libro}}</option>
                             @endforeach
                         </select>
+                        <div class="col d-flex justify-content-end">
+                            <a href="/nuevoslibros/create" class="btn btn-primary">AGREGAR</a>
+                        </div>
                     </div>
                     <div class="row d-flex justify-content-center">
                         <label for="fecha_prestamo">Fecha Prestamos</label>

@@ -12,7 +12,7 @@
         </div>
         <div class="row d-flex justify-content-center mt-3">
             <div class="col-6 d-flex justify-content-center">
-                <form action="{{url ('libros')}}" method="POST">
+                <form action="{{url ('nuevoslibros')}}" method="POST">
                     @csrf
                     <div class="row d-flex justify-content-center">
                         <label for="nombre_libro">Nombre del libro</label>
@@ -71,14 +71,11 @@
                                 </div>
                             </div>
 
-                    <div class="row d-flex justify-content-center">
-                        <div class="col-6 d-flex justify-content-center mt-3">
-                            <button class="btn btn-primary" type="submit">Guardar</button>
-                        </div>
-                    </div>
-
-
-
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-6 d-flex justify-content-center mt-3">
+                                    <button class="btn btn-primary" type="submit">Guardar</button>
+                                </div>
+                            </div>
                 </form>
             </div>
         </div>
