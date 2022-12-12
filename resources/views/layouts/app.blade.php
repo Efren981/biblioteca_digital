@@ -92,7 +92,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a  class="nav-link" href="/categorias">
+                                <a  class="text-white nav-link" href="/categorias">
                                     Categorias
                                 </a>
                             </li>

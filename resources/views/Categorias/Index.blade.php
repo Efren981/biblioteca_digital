@@ -4,17 +4,20 @@
     active
 @endsection
 @section("content")
+<body 
+  style="background-color:#95EEE1;">
+</body>
     <div class="py-4">
         <div class="container">
             <div class="row">
                 <div class="col-md-12" style="">
-                    <h1 class="display-4 bg-dark text-light" style="">Categorias</h1>
+                    <h1 class="display-4 bg-dark text-light text-center" style="">CATEGORIAS</h1>
                 </div>
             </div>
             <div class="row d-flex justify-content-center">
                 <div class="row d-flex justify-content-center">
                     <div class="col-3 d-flex justify-content-center">
-                        <a href="{{route('categorias.create')}}" class="btn btn-success mb-3"> Nueva Categoria</a>
+                        <a href="{{route('categorias.create')}}" class="btn btn-success mb-3"> NUEVA CATEGORIA</a>
                     </div>
                 </div>
 

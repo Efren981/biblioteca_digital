@@ -11,13 +11,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12" style="">
-                    <h1 class="display-4 bg-dark text-light" style="">Prestamos</h1>
+                    <h1 class="display-4 bg-dark text-light text-center" style="">PRESTAMOS</h1>
                 </div>
             </div>
             <div class="row d-flex justify-content-center">
                 <div class="row d-flex justify-content-center">
                     <div class="col-3 d-flex justify-content-center">
-                        <a href="{{route('prestamos.create')}}" class="btn btn-success mb-3"> Nuevo Prestamo</a>
+                        <a href="{{route('prestamos.create')}}" class="btn btn-success mb-3"> NUEVO PRESTAMO</a>
                     </div>
                 </div>
 
@@ -29,8 +29,8 @@
                                 <th>ID</th>
                                 <th>Usuario</th>
                                 <th>Libro</th>
-                                <th>fecha prestamo</th>
-                                <th>fecha devolucion</th>
+                                <th>Fecha prestamo</th>
+                                <th>Fecha devolucion</th>
                                 <th>Opciones</th>
                             </tr>
                             </thead>
