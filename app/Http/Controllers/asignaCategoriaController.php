@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Categorias;
 
 class asignaCategoriaController extends Controller
 {
@@ -24,7 +23,7 @@ class asignaCategoriaController extends Controller
      */
     public function create()
     {
-        return view('Categorias.nuevacategoria');
+        return view('categorias.nuevacategoria');
     }
 
     /**

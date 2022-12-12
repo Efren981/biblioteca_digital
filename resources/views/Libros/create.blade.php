@@ -48,6 +48,7 @@
                         @enderror
                     </div>
                     <div class="row d-flex justify-content-center mt-3">
+<<<<<<< HEAD
                         <label>Editorial</label>
                         <select name="id_editorial" id="id_editorial">
                             <option selected="0">Seleciona una opcion</option>
@@ -63,6 +64,38 @@
                             @foreach($carreras as $carrera)
                                 <option value="{{$carrera->id}}">{{$carrera->descripcion}}</option>
                         @endforeach
+=======
+                        <label>Categoria</label>
+                        <div class="col d-flex">
+                            <select name="id_categoria" id="id_categoria">
+                                <option selected="0">Selecciona una opcion</option>
+                                @foreach($categorias as $categoria)
+                                    <option value="{{$categoria->id}}">{{$categoria->nombre_categoria}}</option>
+                                @endforeach
+                            </select>
+                            <div class="col d-flex justify-content-end">
+                                <a href="/nuevacategoria/create" class="btn btn-primary">AGREGAR</a>
+                            </div>
+                        </div>
+                        <div class="row d-flex justify-content-center mt-3">
+                            <label>Autores</label>
+                            <div class="col d-flex">
+                                <select name="id_autor" id="id_autor">
+                                    <option selected="0">Selecciona una opcion</option>
+                                    @foreach($autores as $autor)
+                                        <option value="{{$autor->id}}">{{$autor->nombre_autor}}</option>
+                                    @endforeach
+                                </select>
+                                <div class="col d-flex justify-content-end">
+                                    <a href="/nuevoautor/create" class="btn btn-primary">AGREGAR</a>
+                                </div>
+                            </div>
+
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-6 d-flex justify-content-center mt-3">
+                            <button class="btn btn-primary" type="submit">Guardar</button>
+                        </div>
+>>>>>>> parent of 513cc4c (Prestamos y libros)
                     </div>
 
                 </form>

@@ -24,7 +24,6 @@ class asignaAutoresController extends Controller
      */
     public function create()
     {
-
         return view('Autores.nuevoautor');
     }
 
