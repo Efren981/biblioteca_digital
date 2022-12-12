@@ -49,6 +49,7 @@
                     </div>
                     <div class="row d-flex justify-content-center mt-3">
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <label>Editorial</label>
                         <select name="id_editorial" id="id_editorial">
                             <option selected="0">Seleciona una opcion</option>
@@ -65,6 +66,8 @@
                                 <option value="{{$carrera->id}}">{{$carrera->descripcion}}</option>
                         @endforeach
 =======
+=======
+>>>>>>> parent of 513cc4c (Prestamos y libros)
                         <label>Categoria</label>
                         <div class="col d-flex">
                             <select name="id_categoria" id="id_categoria">
