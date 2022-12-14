@@ -24,7 +24,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-dark shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light bg-dark shadow-sm" style="background-color:#000000;>
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <img src="{{url("https://document-export.canva.com/RSmvA/DAFUg8RSmvA/6/thumbnail/0001.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAQYCGKMUHWDTJW6UD%2F20221211%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221211T090819Z&X-Amz-Expires=75703&X-Amz-Signature=e2dddfa4debf6c45bd8dbea3ecba0c5fbfce4e036e2dc41dba320a932ffb2d26&X-Amz-SignedHeaders=host&response-expires=Mon%2C%2012%20Dec%202022%2006%3A10%3A02%20GMT")}}" height="75" width="75">
