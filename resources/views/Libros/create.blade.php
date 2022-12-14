@@ -4,10 +4,12 @@
     active
 @endsection
 @section("content")
-    <div class="container">
-        <div class="row d-flex justify-content-center">
-            <div class="col">
-                <h1 class="text-center">Agregar nuevo Libro</h1>
+    <div class="py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12" style="">
+                    <h1 class="display-4 bg-dark text-light text-center" style=""> NUEVO LIBRO</h1>
+                </div>
             </div>
         <div class="row d-flex justify-content-center mt-3">
             <div class="col-7 d-flex justify-content-center">
@@ -56,6 +58,9 @@
                                 <option value="{{$editorial->id}}">{{$editorial->nombre}}</option>
                             @endforeach
                         </select>
+                        <div class="col-2 d-flex justify-content-center">
+                            <a href="/editoriala/create" class="btn btn-primary">AGREGAR</a>
+                        </div>
                     </div>
 
 
@@ -71,28 +76,31 @@
                                 <a href="/nuevacategoria/create" class="btn btn-primary">AGREGAR</a>
                             </div>
                         </div>
-                        <div class="row d-flex justify-content-center mt-3">
-                            <label>Autores</label>
-                            <div class="col d-flex">
-                                <select name="id_autor" id="id_autor">
-                                    <option selected="0">Selecciona una opcion</option>
-                                    @foreach($autores as $autor)
-                                        <option value="{{$autor->id}}">{{$autor->nombre_autor}}</option>
-                                    @endforeach
-                                </select>
-                                <div class="col d-flex justify-content-end">
-                                    <a href="/nuevoautor/create" class="btn btn-primary">AGREGAR</a>
+                            <div class="row d-flex justify-content-center mt-3">
+                                <label>Autores</label>
+                                <div class="col d-flex">
+                                        <select class="select2-multiple form-control" name="id_autor[]" multiple="multiple" id="id_autor">
+                                            <option selected="0">Selecciona una opcion</option>
+                                            @foreach($autores as $autor)
+                                                    <option value="{{$autor->id}}">{{$autor->nombre_autor}}</option>
+                                                @endforeach
+                                        </select>
+                                    <div class="col d-flex justify-content-end">
+                                        <a href="/nuevoautor/create" class="btn btn-primary">AGREGAR</a>
+                                    </div>
                                 </div>
-                            </div>
-
-                    <div class="row d-flex justify-content-center">
-                        <div class="col-6 d-flex justify-content-center mt-3">
-                            <button class="btn btn-primary" type="submit">Guardar</button>
-                        </div>
-                    </div>
-
                 </form>
             </div>
         </div>
     </div>
+        <script>
+            $(document).ready(function() {
+                // Select2 Multiple
+                $('.select2-multiple').select2({
+                    placeholder: "Select",
+                    allowClear: true
+                });
+            });
+        </script>
 @endsection
+
