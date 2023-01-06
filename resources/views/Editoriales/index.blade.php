@@ -28,7 +28,6 @@
                             <tr>
                                 <th>ID</th>
                                 <th>Nombre Editorial</th>
-                                <th>Descripcion</th>
                                 <th>Opciones</th>
                             </tr>
                             </thead>
@@ -37,7 +36,6 @@
                                 <tr>
                                     <th>{{$loop->index+1}}</th>
                                     <td>{{$datos->nombre}}</td>
-                                    <td>{{$datos->descripcion}}</td>
                                     <td>
                                         @can('editar-editorial')
                                             <a class="btn btn-warning" href="{{route('editoriales.edit',$datos->id)}}"> Editar </a>

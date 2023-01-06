@@ -20,7 +20,7 @@
                     @method('PUT')
                     <div class="row d-flex justify-content-center">
                         <label for="Nombre_categoria">Nombre de la categoria</label>
-                        <input type="text" name="Nombre_categoria" class="form-control @error('Nombre_categoria')is-invalid @enderror" id="Nombre_categoria" value="{{old('Nombre_categoria')}}">
+                        <input type="text" name="Nombre_categoria" class="form-control @error('Nombre_categoria')is-invalid @enderror" id="Nombre_categoria" value="{{$categoria->Nombre_categoria}}">
                         @error('Nombre_categoria')
                         <div class="invalid-feedback">{{$message}}</div>
                         @enderror

@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\libros;
 use Illuminate\Http\Request;
 use App\Models\editoriales;
-use App\Models\categorias;
+use App\Models\Categorias;
 use App\Models\autores;
 
 class LibrosController extends Controller
@@ -63,7 +63,7 @@ class LibrosController extends Controller
     public function create()
     {
         $editoriales=editoriales::all();
-        $categorias=categorias::all();
+        $categorias=Categorias::all();
         $autores=autores::all();
         return view("Libros.create",compact('editoriales',"categorias","autores"));
     }
@@ -76,6 +76,7 @@ class LibrosController extends Controller
      */
     public function store(Request $request)
     {
+        dd($request->all());
         $request->validate([
             "nombre_libro"=>"required|min:5|max:100|unique:libros",
             "id_editorial"=>"required",

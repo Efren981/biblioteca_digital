@@ -37,7 +37,7 @@ class PrestamosController extends Controller
             ->select("prestamos.id", "users.name","libros.nombre_libro", "prestamos.fecha_prestamo", "prestamos.fecha_entrega" )
             ->orderby("prestamos.id")
             ->get();
-        return view('Prestamos.index',compact('prestamos'));
+        return view('Prestamos.Index',compact('prestamos'));
     }
 
     /**
@@ -50,7 +50,7 @@ class PrestamosController extends Controller
         $prestamos=prestamos::all();
         $libros=libros::all();
         $user=user::all();
-        return view("Prestamos.create",compact('prestamos',"libros",'user'));
+        return view("Prestamos.Create",compact('prestamos',"libros",'user'));
     }
 
     /**
@@ -98,7 +98,7 @@ class PrestamosController extends Controller
         $prestamos=prestamos::all();
         $user=user::all();
         $libros=libros::all();
-        return view('prestamos,update',compact('prestamo','libros','user'));
+        return view('Prestamos.Update',compact('prestamo','libros','user'));
     }
 
     /**
